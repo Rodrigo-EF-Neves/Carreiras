@@ -1,22 +1,27 @@
 <template>
-    <v-app-bar scroll-behavior="elevate">
-        <div class="navbar-container">
-            <div class="d-flex justify-center align-center">
-                <img class="carreiras-logo" src="../assets/Logo.png" alt="">
+    <v-container fluid="true">
+        <v-app-bar scroll-behavior="elevate">
+            <div class="navbar-container">
+                <div class="d-flex justify-center align-center">
+                    <img class="carreiras-logo" src="../assets/Logo.png" alt="">
+                </div>
+                <div class="sign-in-buttons">
+                    <v-btn class="adm-btn" variant="outlined">
+                        Adm
+                    </v-btn>
+                    <v-btn class="bg-purple-darken-4">
+                        Login
+                    </v-btn>
+                </div>
             </div>
-            <div class="sign-in-buttons">
-                <v-btn class="adm-btn" variant="outlined">
-                    Adm
-                </v-btn>
-                <v-btn class="bg-purple-darken-4">
-                    Login
-                </v-btn>
-            </div>
-        </div>
-    </v-app-bar>
+        </v-app-bar>
+    </v-container>
 </template>
 
 <style lang="scss">
+.v-container {
+    padding: 0 !important;
+}
 .v-app-bar {
     border-bottom: 1px solid #C3C3C3 !important;
 }
@@ -42,8 +47,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 10px;
-    gap: 5px;
+    margin: 0 20px;
+    gap: 10px;
 }
 
 .adm-btn {
