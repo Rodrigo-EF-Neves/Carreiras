@@ -5,18 +5,26 @@
                 <div class="d-flex justify-center align-center">
                     <img class="carreiras-logo" src="../assets/Logo.png" alt="">
                 </div>
-                <div class="sign-in-buttons">
+                <!-- TODO Validar quando o usuário estiver logado (vai ser feito futuranente) -->
+                <!-- <div class="sign-in-buttons">
                     <v-btn class="adm-btn" variant="outlined">
                         Adm
                     </v-btn>
                     <v-btn class="bg-purple-darken-4">
                         Login
                     </v-btn>
+                </div> -->
+                <div class="user-account-avatar">
+                    <NavbarLogado/>
                 </div>
             </div>
         </v-app-bar>
     </v-container>
 </template>
+
+<script setup>
+import NavbarLogado from './NavbarLogado.vue';
+</script>
 
 <style lang="scss">
 .v-container {
@@ -54,5 +62,9 @@
 .adm-btn {
     border: thin solid #3A1C76 !important;
     color: #3A1C76 !important;
+}
+
+.user-account-avatar {
+    margin: 0 20px;
 }
 </style>
