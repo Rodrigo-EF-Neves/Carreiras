@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="div-users">
         <v-card-text>
             <v-text-field :loading="loading" append-inner-icon="mdi-magnify" density="compact"
                 label="Perquise um candidato" variant="solo" hide-details single-line @click:append-inner="onClick">
@@ -14,6 +14,14 @@
 </template>
 
 <style>
+.div-users{
+    max-width: 300px;
+    min-width: 75px;
+    width: 30%;
+    height: 100vh;
+    border-right: 1px solid #ddd;
+}
+
 .v-list {
     /* margin: 10px 0 10px 0; */
     display: flex;

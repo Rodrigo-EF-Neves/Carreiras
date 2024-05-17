@@ -1,12 +1,11 @@
 <template>
-    <div class="div-chat">
-        <ChatUsers />
-        <ChatDialogo />
+    <div class="div-dialogo">
+        teste
     </div>
 </template>
 
 <style>
-.div-chat {
+.div-dialogo {
     display: flex;
     flex-direction: row;
 }
