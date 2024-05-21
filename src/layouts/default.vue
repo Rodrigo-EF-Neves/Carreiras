@@ -7,12 +7,5 @@
 </template>
 
 <script setup>
-//
+  //
 </script>
-
-<style>
-.mdi {
-  font-size: 30px;
-  cursor: pointer;
-}
-</style>
