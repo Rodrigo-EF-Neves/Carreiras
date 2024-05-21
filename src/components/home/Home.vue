@@ -1,13 +1,12 @@
 <template>
   <div class="search-container">
     <h1>Encontre uma carreira para você!</h1>
-    <div style="width: 60%; min-width: 300px;">
-      <v-text-field
-        append-inner-icon="mdi-magnify"
-        class="search-field"
-        label="Digite um cargo, cidade, estado"
-        variant="solo"
-      ></v-text-field>
+    <div class="search-field">
+      <v-card-text>
+          <v-text-field :loading="loading" append-inner-icon="mdi-magnify" density="compact"
+              label="Digite um cargo, cidade, estado." variant="solo" hide-details single-line @click:append-inner="onClick">
+          </v-text-field>
+      </v-card-text>
     </div>
   </div>
   <div class="mx-4">
@@ -150,8 +149,24 @@
   </div>
 </template>
 
-<script setup>
-  //
+<script>
+  export default {
+    data: () => ({
+        loaded: false,
+        loading: false,
+    }),
+
+    methods: {
+        onClick() {
+            this.loading = true
+
+            setTimeout(() => {
+                this.loading = false
+                this.loaded = true
+            }, 2000)
+        },
+    },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -168,6 +183,11 @@
     min-height: 48%;
     gap: 2.5em;
     padding: 0 5px;
+
+    .search-field {
+      max-width: 800px !important;
+      width: 100% !important;
+    }
 
     h1 {
       color: #fff;
