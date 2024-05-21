@@ -56,6 +56,7 @@ export default {
             if (window.innerWidth < 800) {
                 document.querySelector('.dialogo').style.display = 'none';
                 document.querySelector('.div-users').style.display = 'block';
+                document.querySelector('.menu-mob').style.display = 'flex';
             }
         },
 

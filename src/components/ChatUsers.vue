@@ -64,6 +64,7 @@ export default {
             if (window.innerWidth < 800) {
                 document.querySelector('.dialogo').style.display = 'flex';
                 document.querySelector('.div-users').style.display = 'none';
+                document.querySelector('.menu-mob').style.display = 'none';
             } else {
                 alert("Conversa do " + valor);
             }

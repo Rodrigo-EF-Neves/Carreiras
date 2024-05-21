@@ -3,6 +3,7 @@
         <ChatUsers />
         <ChatDialogo />
     </div>
+    <MenuMob />
 </template>
 
 <style>
@@ -21,5 +22,15 @@
 
 .dialogo-conversa::-webkit-scrollbar{
     display: block;
+}
+
+.menu-mob{
+    display: none;
+}
+
+@media(max-width:800px){
+    .menu-mob{
+        display: flex;
+    }
 }
 </style>
