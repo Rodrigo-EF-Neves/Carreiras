@@ -9,9 +9,9 @@
       <div class="content-candidato">
         <div class="center-info">
           <h1 class="titulo">Cadidato</h1>
-          <div class="button-solid">
-            <a class="button-geral" href="">Entrar</a>
-          </div>
+          <v-btn class="bg-purple-darken-4">
+            Entrar
+          </v-btn>
           <img class="img-person" src="../../assets/happy-man.png" alt="" />
         </div>
       </div>
@@ -19,9 +19,9 @@
       <div class="content-empresa">
         <div class="center-info">
           <h1 class="titulo" style="color: white !important;">Empresa</h1>
-          <div class="button-white">
-            <a class="button-geral" style="color: black !important;" href="">Entrar</a>
-          </div>
+          <v-btn class="bg-purple-lighten-5" variant="outlined">
+            Entrar
+          </v-btn>
           <img class="img-people" src="../../assets/businesspeople.png" alt="" />
         </div>
       </div>
@@ -36,7 +36,7 @@
 
 <style lang="scss" scoped>
 .titulo {
-  font-size: 28px;
+  font-size: 25px;
   margin-bottom: 10px;
   color: rgba(58, 28, 118, 1);
 }
@@ -49,19 +49,19 @@
 
 .content-full {
   display: flex;
-    flex-direction: column;
-    position: fixed;
-    width: 100%;
-    background-color: rgba(58, 28, 118, 1);
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(58, 28, 118, 1);
 }
 
-.div-logo{
+.div-logo {
   background-color: rgb(255, 255, 255);
-    margin-right: 50%;
+  margin-right: 50%;
 }
 
 .carreiras-logo {
-  width: 25%;
+  width: 22%;
   height: auto;
   margin: 20px 20px;
 }
@@ -75,25 +75,9 @@
   width: 50%;
 }
 
-.button-solid {
-  padding: 6px 35px;
-  background-color: rgba(58, 28, 118, 1);
-  border-radius: 5px;
-}
-
-.button-white {
-  padding: 6px 35px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 5px;
-  border-color: rgba(58, 28, 118, 1);
-}
-
-.button-geral {
-  margin: none;
-  color: white;
-  text-decoration: none;
-  font-size: larger;
-  font-weight: bold;
+.adm-btn {
+    border: thin solid #3A1C76 !important;
+    color: #3A1C76 !important;
 }
 
 .center-info {
@@ -105,7 +89,7 @@
 
 .img-people {
   width: 100%;
-  margin-top:50px;
+  margin-top: 50px;
 }
 
 .img-person {
