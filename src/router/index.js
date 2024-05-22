@@ -1,15 +1,13 @@
-
-/**
- * router/index.ts
- *
- * Automatic routes for `./src/pages/*.vue`
- */
-
-// Composables
-import { createRouter, createWebHistory } from 'vue-router/auto'
+import { createRouter, createWebHistory } from 'vue-router';
+import Index from '@/pages/index.vue';
+import TipoCadastro from '@/pages/tipoCadastro.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-})
+  routes: [
+    { path: '/', component: Index }, 
+    { path: '/tipo_cadastro', component: TipoCadastro}
+  ],
+});
 
-export default router
+export default router;
