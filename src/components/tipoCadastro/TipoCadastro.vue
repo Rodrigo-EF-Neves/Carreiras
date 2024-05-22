@@ -40,13 +40,11 @@
   margin-bottom: 10px;
   color: rgba(58, 28, 118, 1);
 }
-
 .candidato-empresa {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
-
 .content-full {
   display: flex;
   flex-direction: column;
@@ -54,18 +52,15 @@
   width: 100%;
   background-color: rgba(58, 28, 118, 1);
 }
-
 .div-logo {
   background-color: rgb(255, 255, 255);
   margin-right: 50%;
 }
-
 .carreiras-logo {
   width: 22%;
   height: auto;
   margin: 20px 20px;
 }
-
 .content-candidato {
   width: 50%;
   background-color: rgb(255, 255, 255);
@@ -89,11 +84,11 @@
 
 .img-people {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .img-person {
   width: 40%;
-  margin-top: 100px;
+  margin-top: 120px;
 }
 </style>
