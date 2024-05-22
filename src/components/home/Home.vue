@@ -1,4 +1,5 @@
 <template>
+  <Navbar/>
   <div class="search-container">
     <h1>Encontre uma carreira para você!</h1>
     <div class="search-field">
