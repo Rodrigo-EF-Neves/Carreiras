@@ -3,7 +3,7 @@
         <ChatUsers />
         <ChatDialogo />
     </div>
-    <MenuMob />
+    <!-- <MenuMob /> -->
 </template>
 
 <style>
