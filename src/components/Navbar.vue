@@ -3,7 +3,7 @@
         <v-app-bar scroll-behavior="elevate">
             <div class="navbar-container">
                 <div class="d-flex justify-center align-center">
-                    <img class="carreiras-logo" src="../assets/Logo.png" alt="">
+                    <img class="carreiras-logo" src="../assets/logo.png" alt="">
                 </div>
                 <!-- TODO Validar quando o usuário estiver logado (vai ser feito futurane) -->
                 <!-- <div class="sign-in-buttons">
