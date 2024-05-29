@@ -1,18 +1,17 @@
 <template>
     <Navbar/>
-    <v-container>
-        <div class="perfil-info">
-            <div style="width: 100%">
-                <v-img
-                    :width="300"
-                    aspect-ratio="16/9"
-                    cover
-                    src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-                ></v-img>
+    <v-container fluid="true">
+        <div class="empresa-info">
+            <div class="capa"></div>
+            <div class="pos-capa">
+
             </div>
-            <div>
-                 <img class="logo-perfil-empresa" src="https://picsum.photos/seed/picsum/150/150" alt="logo">
+            <div class="empresa-imagem">
+
             </div>
+        </div>
+        <div>
+            <CardVaga/>
         </div>
     </v-container>
 </template>
@@ -22,7 +21,30 @@
 </script>
 
 <style lang="scss" scoped>
-.logo-perfil-empresa {
-    border-radius: 50%;
+.empresa-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.capa {
+    height: 200px;
+    background-image: url("https://cdn.vuetifyjs.com/images/parallax/material.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.pos-capa {
+    height: 200px;
+    background-color: #E1D6F6;
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 </style>
