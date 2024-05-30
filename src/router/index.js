@@ -12,8 +12,8 @@ const router = createRouter({
     { path: '/', component: Index }, // Página Index como a rota padrão
     { path: '/chat', component: Chat},
     { path: '/login', component: Login},
-    { path: '/cadastro', component: CADempresa},
-    { path: '/cadastro', component: CADcandidato},
+    { path: '/cadastro-empresa', component: CADempresa},
+    { path: '/cadastro-candidato', component: CADcandidato},
     { path: '/empresa_candidato', component: EntrarEmpresaOuCandidato}
   ],
 });
