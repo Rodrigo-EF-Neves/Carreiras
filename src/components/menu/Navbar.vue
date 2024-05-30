@@ -3,7 +3,9 @@
         <v-app-bar scroll-behavior="elevate">
             <div class="navbar-container">
                 <div class="d-flex justify-center align-center">
-                    <img class="carreiras-logo" src="../../assets/Logo.png" alt="">
+                    <a href="/" class="d-flex justify-center align-center">
+                        <img class="carreiras-logo" src="../../assets/Logo.png" alt="">
+                    </a>
                 </div>
                 <!-- TODO Validar quando o usuário estiver logado (vai ser feito futurane) -->
                 <!-- <div class="sign-in-buttons">
@@ -14,7 +16,7 @@
                         Login
                     </v-btn>
                 </div> -->
-                <NavbarLogado/>
+                <NavbarLogado />
             </div>
         </v-app-bar>
     </v-container>
@@ -24,11 +26,11 @@
 
 export default {
     data: () => ({
-      user: {
-        initials: 'JD',
-        fullName: 'Junior Dev',
-        email: 'juniordev@gmail.com',
-      },
+        user: {
+            initials: 'JD',
+            fullName: 'Junior Dev',
+            email: 'juniordev@gmail.com',
+        },
     }),
 }
 </script>
@@ -37,6 +39,7 @@ export default {
 .v-container {
     padding: 0 !important;
 }
+
 .v-app-bar {
     border-bottom: 1px solid #C3C3C3 !important;
 }
@@ -71,7 +74,7 @@ export default {
     color: #3A1C76 !important;
 }
 
-.v-btn a{
+.v-btn a {
     text-decoration: none;
     color: black;
 }
