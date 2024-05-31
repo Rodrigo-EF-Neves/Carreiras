@@ -21,6 +21,7 @@
             class="v-btn--size-x-large">Entrar</v-btn>
           <img class="img-people" src="../assets/businesspeople.png" alt="Business People" />
         </v-col>
+        
       </v-row>
     </v-col>
   </v-container>
