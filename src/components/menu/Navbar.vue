@@ -3,7 +3,7 @@
         <v-app-bar scroll-behavior="elevate">
             <div class="navbar-container">
                 <div class="d-flex justify-center align-center">
-                    <a href="/" class="d-flex justify-center align-center">
+                    <a href="/" class="d-flex justify-center align-center" style="width: 150px; height: 150px; margin-left: 15px;">
                         <img class="carreiras-logo" src="../../assets/Logo.png" alt="">
                     </a>
                 </div>

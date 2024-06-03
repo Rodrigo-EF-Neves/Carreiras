@@ -1,6 +1,7 @@
 <template>
     <Navbar/>
-    <FotoCapa />
+    <FotoCapa/>
+    <InfosCandidato />
 </template>
 <style>
     * {
