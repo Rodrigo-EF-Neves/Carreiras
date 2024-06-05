@@ -1,7 +1,7 @@
 <template>
-  <v-container fluid="true" class="login-container fill-height">
+  <v-container fluid class="login-container fill-height">
       <v-row style="margin: 0;" justify="center">
-        <v-col cols="12" sm="8" md="4">
+        <v-col cols="12" sm="8" md="6">
           <div class="logo-container text-center">
             <img class="carreiras-logo" src="/src/assets/Logo_branco.png" alt="">
           </div>
