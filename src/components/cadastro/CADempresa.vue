@@ -58,8 +58,143 @@
                     ></v-text-field>
                   </v-col>
               </v-row>
+              <v-row>
+                <v-col cols="3">
+                   <v-text-field
+                      v-model="cnpj"
+                      :rules="cnpjRules"
+                      label="CNPJ"
+                      class="mb-4"
+                      bg-color="#F7F7F7"
+                   ></v-text-field>
+                </v-col>
+                <v-col cols="3">
+                  <v-text-field
+                      v-model="inscricaoEstadual"
+                      :rules="inscricaoEstadualRules"
+                      label="Inscrição estadual"
+                      class="mb-4"
+                      bg-color="#F7F7F7"
+                    ></v-text-field>
+                </v-col>
+                <v-col cols="4">
+                  <v-text-field
+                      v-model="cep"
+                      :rules="cepRules"
+                      label="CEP"
+                      class="mb-4"
+                      bg-color="#F7F7F7"
+                    ></v-text-field>
+                </v-col>
+                <v-col cols="2">
+                  <v-text-field
+                      v-model="numero"
+                      :rules="numeroRules"
+                      label="Nº"
+                      class="mb-4"
+                      bg-color="#F7F7F7"
+                    ></v-text-field>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="6">
+                  <v-text-field
+                      v-model="complemento"
+                      :rules="complementoRules"
+                      label="Complemento"
+                      class="mb-4"
+                      bg-color="#F7F7F7"
+                    ></v-text-field>
+                </v-col>
+                <v-col>
+                  <v-text-field
+                      v-model="endereco"
+                      :rules="enderecoRules"
+                      label="Endereço"
+                      class="mb-4"
+                      bg-color="#F7F7F7"
+                    ></v-text-field>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="3">
+                  <v-text-field
+                      v-model="bairro"
+                      :rules="bairroRules"
+                      label="Bairro"
+                      class="mb-4"
+                      bg-color="#F7F7F7"
+                    ></v-text-field>
+                </v-col>
+                <v-col cols="3">
+                  <v-text-field
+                      v-model="cidade"
+                      :rules="cidadeRules"
+                      label="Cidade"
+                      class="mb-4"
+                      bg-color="#F7F7F7"
+                    ></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-select
+                      v-model="estado"
+                      :rules="estadoRules"
+                      :items="['Amazonas', 'Amapá', 'Santa Catarina', 'Paraná', 'Rio Grande do Sul', 'São Paulo']"
+                      label="Estado"
+                      class="mb-4"
+                      bg-color="#F7F7F7"
+                    ></v-select>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field
+                      v-model="responsavelLegal"
+                      :rules="responsavelLegalRules"
+                      label="Responsável legal"
+                      class="mb-4"
+                      bg-color="#F7F7F7"
+                    ></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field
+                      v-model="responsavelAdm"
+                      :rules="responsavelAdmRules"
+                      label="Responsável administrativo (RA)"
+                      class="mb-4"
+                      bg-color="#F7F7F7"
+                    ></v-text-field>
+                </v-col>
+                <v-row>
+                  <v-col cols="6">
+                    <v-text-field
+                        v-model="contatoRA"
+                        :rules="contatoRARules"
+                        label="Contato RA"
+                        class="mb-4"
+                        bg-color="#F7F7F7"
+                      ></v-text-field>
+                  </v-col>
+                  <v-col cols="3">
+                    <v-text-field
+                      v-model="senha"
+                      :rules="senhaRules"
+                      label="Senha"
+                      class="mb-4"
+                      bg-color="#F7F7F7"
+                    ></v-text-field>
+                  </v-col>
+                  <v-col cols="3">
+                    <v-text-field
+                      v-model="repSenha"
+                      :rules="repSenhaRules"
+                      label="Repetir senha"
+                      class="mb-4"
+                      bg-color="#F7F7F7"
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
+              </v-row>
               <div class="sign-in-buttons d-flex justify-center mt-4">
-                <v-btn lass="adm-btn" class="bg-purple-darken-4">Salvar</v-btn>
+                <v-btn class="adm-button bg-purple-darken-4" size="large">Salvar</v-btn>
               </div>
               <div class="api-google">
                 <br>
@@ -102,7 +237,7 @@ export default {
 .signup-card {
   margin: 0 auto; 
   width: auto; 
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 .v-row {
@@ -119,7 +254,7 @@ export default {
 }
 
 .carreiras-logo {
-  height: 80px;
+  height: 90px;
   width: 300px;
   margin: 0 10px;
 }
