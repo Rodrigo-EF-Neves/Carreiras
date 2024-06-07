@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <Loading />
+      <!-- <Loading /> -->
       <router-view />
     </v-main>
   </v-app>
