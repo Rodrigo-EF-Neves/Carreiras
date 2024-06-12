@@ -37,7 +37,7 @@
                                     <v-card-title>Sistemas da informação</v-card-title>
                                     <v-card-subtitle>Bacharelado</v-card-subtitle>
                                     <v-card-text>UniSENAI Joinville <br> De 2020 a 2024</v-card-text>
-                                    <EditarDescCandidato />
+                                    <EditarFormacoes />
                                 </v-card>
                             </v-col>
                             <v-col cols="12" lg="6" md="12" sm="12" class="bloco">
@@ -45,7 +45,7 @@
                                     <v-card-title>Desenvolvimento de Sistemas</v-card-title>
                                     <v-card-subtitle>Técnico</v-card-subtitle>
                                     <v-card-text>UniSENAI Joinville <br> De 2020 a 2024</v-card-text>
-                                    <EditarDescCandidato />
+                                    <EditarFormacoes />
                                 </v-card>
                             </v-col>
                         </v-row>
@@ -74,19 +74,30 @@
             </v-col>
             <v-col cols="12" md="6">
                 <v-expansion-panel>
-                    <template v-slot:title>
+                    <v-expansion-panel-title>
                         <i class="mdi mdi-briefcase cor-primaria" style="margin-right: 8px;"></i>
-                        <h3 class="cor-primaria">Experiências Profissionais</h3>
-                    </template>
-                    <template v-slot:text>
-                        <div class="bloco-interno" v-for="(experiencia, index) in experiencias" :key="index">
-                            <h3>{{ experiencia }}</h3>
-                            <p>SKGaming</p>
-                            <p>CLT</p>
-                            <p>Tempo Integral</p>
-                            <p>De 2023 a 2024</p>
-                        </div>
-                    </template>
+                        <h3>Experiências Profissionais</h3>
+                    </v-expansion-panel-title>
+                    <v-expansion-panel-text>
+                        <v-row>
+                            <v-col cols="12" lg="6" md="12" sm="12" class="bloco">
+                                <v-card variant="tonal">
+                                    <v-card-title>Suporte Técnico</v-card-title>
+                                    <v-card-subtitle>Soft Master</v-card-subtitle>
+                                    <v-card-text>CLT <br> Tempo Integral <br> De 2020 a 2024</v-card-text>
+                                    <EditarDescCandidato />
+                                </v-card>
+                            </v-col>
+                            <v-col cols="12" lg="6" md="12" sm="12" class="bloco">
+                                <v-card variant="tonal">
+                                    <v-card-title>Chapeiro</v-card-title>
+                                    <v-card-subtitle>Burguer Master</v-card-subtitle>
+                                    <v-card-text>CLT <br> Tempo Integral <br> De 2020 a 2024</v-card-text>
+                                    <EditarDescCandidato />
+                                </v-card>
+                            </v-col>
+                        </v-row>
+                    </v-expansion-panel-text>
                 </v-expansion-panel>
             </v-col>
             <v-col cols="12" md="6">
