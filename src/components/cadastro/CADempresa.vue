@@ -100,7 +100,6 @@
                 <v-col cols="12" sm="6" md="6" lg="6">
                    <v-text-field
                       v-model="complemento"
-                      :rules="complementoRules"
                       label="Complemento"
                       bg-color="#F7F7F7"
                       density="compact"
@@ -228,10 +227,37 @@ export default {
       contatoRA: '',
       senha: '',
       repSenha: '',
-      razaoSocialRules: [(v) => !!v || 'A razão social é obrigatória'],
-      nomeFantasiaRules: [(v) => !!v || 'O nome fantasia é obrigatório'],
-      estadoRules: [(v) => !!v || 'O estado é obrigatório'],
-      senhaRules: [(v) => !!v || 'A senha é obrigatória'],
+      razaoSocialRules: [(v) => !!v || 'Razão social requerida'],
+      nomeFantasiaRules: [(v) => !!v || 'Nome fantasia requerido'],
+      emailRules: [(v) => !!v || 'E-mail requerido',
+        (v) => /.+@.+\..+/.test(v) || 'E-mail precisa ser válido',
+        (v) => v.length <= 254 || "E-mail deve ter no máximo 254 caracteres"],
+      telefoneRules: [(v) => !!v || 'Telefone requerido',
+        (v) => v.length >= 10 || "Telefone deve ter pelo menos 10 caracteres"],
+      celularRules: [(v) => !!v || 'Celular requerido',
+        (v) => v.length >= 10 || "Celular deve ter pelo menos 10 caracteres"],
+      cnpjRules: [(v) => !!v || 'CNPJ requerido',
+        (v) => /^\d+$/.test(v) || "CNPJ deve conter apenas números"],
+      inscricaoEstadualRules: [(v) => !!v || 'Inscrição estadual requerida'],
+      cepRules: [(v) => !!v || 'CEP requerido',
+        (v) => v.length === 8 || "CEP deve ter 8 caracteres",
+        (v) => /^\d+$/.test(v) || "CEP deve conter apenas números",],
+      numeroRules: [(v) => !!v || 'Número requerido', 
+      (v) => v.length >= 1 || "Nº Casa deve ter pelo menos 1 caractere",],
+      enderecoRules: [(v) => !!v || "Endereço Requerido",
+        (v) => v.length >= 5 || "Endereço deve ter pelo menos 5 caracteres",
+      ],
+      bairroRules: [(v) => !!v || "Bairro Requerido",
+        (v) => v.length >= 3 || "Bairro deve ter pelo menos 3 caracteres",
+      ],
+      cidadeRules: [(v) => !!v || "Cidade Requerida",
+        (v) => v.length >= 3 || "Cidade deve ter pelo menos 3 caracteres",
+      ],
+      estadoRules: [(v) => !!v || 'Estado requerido'],
+      responsavelLegalRules: [(v) => !!v || 'Responsável legal requerido'],
+      responsavelAdmRules: [(v) => !!v || 'Responsável administrativo requerido'],
+      senhaRules: [(v) => !!v || 'Senha requerida'],
+      repSenhaRules: [(v) => !!v || 'Repetir senha requerido'],
       items: [
         'Amazonas', 
         'Amapá',
@@ -254,7 +280,7 @@ export default {
 .signup-card {
   margin: 0 auto; 
   width: auto; 
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
 .v-row {

@@ -132,13 +132,14 @@
               </v-row>
               <v-row>
                 <v-col cols="12" sm="6" md="6" lg="6">
-                  <v-text-field
+                  <v-select
                     v-model="estado"
                     :rules="estadoRules"
+                    :items="items"
                     label="Estado"
                     bg-color="#F7F7F7"
                     density="compact"
-                  ></v-text-field>
+                  ></v-select>
                 </v-col>
                 <v-col cols="12" sm="3" md="3" lg="3">
                   <v-text-field
@@ -206,17 +207,17 @@ export default {
       ],
 
       emailRules: [
-        (v) => !!v || "E-mail is required",
-        (v) => /.+@.+\..+/.test(v) || "E-mail Precisa ser Valido",
+        (v) => !!v || "E-mail requerido",
+        (v) => /.+@.+\..+/.test(v) || "E-mail precisa ser válido",
         (v) => v.length <= 254 || "E-mail deve ter no máximo 254 caracteres",
       ],
       cellphoneRules: [
-        (v) => !!v || "Telefone is required",
-        (v) => v.length >= 10 || "Telefone deve ter pelo menos 10 caracteres",
-        (v) => /^\d+$/.test(v) || "Telefone deve conter apenas números",
+        (v) => !!v || "Celular requerido",
+        (v) => v.length >= 10 || "Celular deve ter pelo menos 10 caracteres",
+        (v) => /^\d+$/.test(v) || "Celular deve conter apenas números",
       ],
       phoneRules: [
-        (v) => !!v || "Telefone is required",
+        (v) => !!v || "Telefone requerido",
         (v) => v.length >= 10 || "Telefone deve ter pelo menos 10 caracteres",
         (v) => /^\d+$/.test(v) || "Telefone deve conter apenas números",
       ],
@@ -259,8 +260,7 @@ export default {
       ],
 
       estadoRules: [
-        (v) => !!v || "Estado Requerido",
-        (v) => v.length === 2 || "Estado deve ter 2 caracteres",
+        (v) => !!v || "Estado Requerido"
       ],
 
       passwordRules: [
@@ -277,6 +277,14 @@ export default {
         (v) => !!v || "Repetir Senha Requerida",
         (v) => v === this.password || "Senhas não coincidem",
       ],
+      items: [
+        'Amazonas', 
+        'Amapá',
+        'Santa Catarina', 
+        'Paraná', 
+        'Rio Grande do Sul', 
+        'São Paulo'
+      ]
     };
   },
 };
