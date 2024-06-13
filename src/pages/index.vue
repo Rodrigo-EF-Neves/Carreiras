@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-  import Navbar from '../components/Navbar.vue';
+  import Home from '@/components/home/Home.vue';
 </script>

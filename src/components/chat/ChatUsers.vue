@@ -2,7 +2,7 @@
     <div class="div-users">
         <v-card-text>
             <v-text-field :loading="loading" append-inner-icon="mdi-magnify" density="compact"
-                label="Perquise alguém aqui" variant="solo" hide-details single-line @click:append-inner="onClick">
+                label="Pesquise alguém aqui" variant="solo" hide-details single-line @click:append-inner="onClick">
             </v-text-field>
         </v-card-text>
         <v-list lines="one" class="lista-users">
