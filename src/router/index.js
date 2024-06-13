@@ -5,6 +5,7 @@ import Login from '@/components/login/Login.vue';
 import CADempresa from '@/components/cadastro/CADempresa';
 import CADcandidato from '@/components/cadastro/CADcandidato';
 import EntrarEmpresaOuCandidato from '@/components/EntrarEmpresaOuCandidato.vue';
+import EDCcandidato from '@/components/edicao/EDCcandidato.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,7 +15,8 @@ const router = createRouter({
     { path: '/login', component: Login},
     { path: '/cadastro-empresa', component: CADempresa},
     { path: '/cadastro-candidato', component: CADcandidato},
-    { path: '/empresa_candidato', component: EntrarEmpresaOuCandidato}
+    { path: '/empresa_candidato', component: EntrarEmpresaOuCandidato},
+    { path: '/editar-candidato', component: EDCcandidato}
   ],
 });
 

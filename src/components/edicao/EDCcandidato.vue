@@ -1,17 +1,17 @@
-<template>
-  <v-container fluid class="signup-container fill-height">
+<template> 
+<v-container fluid class="signup-container fill-height">
     <v-row style="margin: 0" justify="center">
       <v-col cols="12" sm="9" md="10" lg="11">
         <div class="logo-container text-center">
           <img
             class="carreiras-logo"
-            src="/src/assets/Logo_branco.png"
+            src="/src/assets/logo.png"
             alt="Logo do Carreiras"
           />
         </div>
         <v-card class="px-4 elevation-12 signup-card" rounded="xl">
           <v-card-text>
-            <h1 class="text-center my-1">Cadastro</h1>
+            <h1 class="text-center my-1">Edição do cadastro</h1>
             <v-form class="my-4" @submit.prevent>
               <v-row>
                 <v-col cols="12" sm="6" md="6" lg="6">
@@ -94,7 +94,6 @@
                 <v-col cols="12" sm="3" md="3" lg="3">
                   <v-text-field
                     v-model="complemento"
-                    :rules="complementoRules"
                     label="Complemento"
                     bg-color="#F7F7F7"
                     density="compact"
@@ -161,6 +160,7 @@
                 </v-col>
               </v-row>
               <div class="sign-in-buttons d-flex justify-center my-4">
+                <v-btn class="adm-btn " variant="outlined me-2">Cancelar</v-btn>
                 <v-btn lass="adm-btn" class="bg-purple-darken-4 me-2"
                   >Salvar</v-btn
                 >
@@ -173,126 +173,121 @@
   </v-container>
 </template>
 
-<script>
+<script> 
 export default {
-  data() {
-    return {
-      nameSocial:'',
-      nomeCompleto:'',
-      email:'',
-      phone:'',
-      cellphone:'',
-      cpf:'',
-      cep:"",
-      confirmcep:'',
-      numCasa:'',
-      complemento:'',
-      endereco:'',
-      bairro:'',
-      cidade:'',
-      cidade:'',
-      estado:'',
-      password:'',
-      confirmPassword:'',
+    data() {
+        return {
+            nameSocial:'',
+            nomeCompleto:'',
+            email:'',
+            phone:'',
+            cellphone:'',
+            cpf:'',
+            cep:"",
+            confirmcep:'',
+            numero:'',
+            complemento:'',
+            endereco:'',
+            bairro:'',
+            cidade:'',
+            cidade:'',
+            estado:'',
+            password:'',
+            confirmPassword:'',
 
-      namesocialRules: [
-        (v) => !!v || "Nome Social Requerido",
-        (v) => v.length >= 3 || "Nome Social deve ter pelo menos 3 caracteres",
-      ],
+            namesocialRules: [
+                (v) => !!v || "Nome Social Requerido",
+                (v) => v.length >= 3 || "Nome Social deve ter pelo menos 3 caracteres",
+            ],
 
-      nomeCompletoRules: [
-        (v) => !!v || "Nome Completo Requerido",
-        (v) =>
-          v.length >= 5 || "Nome Completo deve ter pelo menos 5 caracteres",
-      ],
+            nomeCompletoRules: [
+                (v) => !!v || "Nome Completo Requerido",
+                (v) =>
+                v.length >= 5 || "Nome Completo deve ter pelo menos 5 caracteres",
+            ],
 
-      emailRules: [
-        (v) => !!v || "E-mail requerido",
-        (v) => /.+@.+\..+/.test(v) || "E-mail precisa ser válido",
-        (v) => v.length <= 254 || "E-mail deve ter no máximo 254 caracteres",
-      ],
-      cellphoneRules: [
-        (v) => !!v || "Celular requerido",
-        (v) => v.length >= 10 || "Celular deve ter pelo menos 10 caracteres",
-        (v) => /^\d+$/.test(v) || "Celular deve conter apenas números",
-      ],
-      phoneRules: [
-        (v) => !!v || "Telefone requerido",
-        (v) => v.length >= 10 || "Telefone deve ter pelo menos 10 caracteres",
-        (v) => /^\d+$/.test(v) || "Telefone deve conter apenas números",
-      ],
+            emailRules: [
+                (v) => !!v || "E-mail requerido",
+                (v) => /.+@.+\..+/.test(v) || "E-mail precisa ser válido",
+                (v) => v.length <= 254 || "E-mail deve ter no máximo 254 caracteres",
+            ],
+            cellphoneRules: [
+                (v) => !!v || "Celular requerido",
+                (v) => v.length >= 10 || "Celular deve ter pelo menos 10 caracteres",
+                (v) => /^\d+$/.test(v) || "Celular deve conter apenas números",
+            ],
+            phoneRules: [
+                (v) => !!v || "Telefone requerido",
+                (v) => v.length >= 10 || "Telefone deve ter pelo menos 10 caracteres",
+                (v) => /^\d+$/.test(v) || "Telefone deve conter apenas números",
+            ],
 
-      cpfRules: [
-        (v) => !!v || "CPF Requerido",
-        (v) => v.length === 11 || "CPF deve ter 11 caracteres",
-        (v) => /^\d+$/.test(v) || "CPF deve conter apenas números",
-      ],
+            cpfRules: [
+                (v) => !!v || "CPF Requerido",
+                (v) => v.length === 11 || "CPF deve ter 11 caracteres",
+                (v) => /^\d+$/.test(v) || "CPF deve conter apenas números",
+            ],
 
-      confirmcepRules: [
-        (v) => !!v || "CEP Requerido",
-        (v) => v.length === 8 || "CEP deve ter 8 caracteres",
-        (v) => /^\d+$/.test(v) || "CEP deve conter apenas números",
-      ],
+            confirmcepRules: [
+                (v) => !!v || "CEP Requerido",
+                (v) => v.length === 8 || "CEP deve ter 8 caracteres",
+                (v) => /^\d+$/.test(v) || "CEP deve conter apenas números",
+            ],
 
-      confirmnumeroRules: [
-        (v) => !!v || "Nº Requerido",
-        (v) => v.length >= 1 || "Nº deve ter pelo menos 1 caractere",
-      ],
+            confirmnumeroRules: [
+                (v) => !!v || "Nº Requerido",
+                (v) => v.length >= 1 || "Nº deve ter pelo menos 1 caractere",
+            ],
 
-      complementoRules: [
-        (v) => !!v || "Complemento Requerido",
-        (v) => v.length >= 3 || "Complemento deve ter pelo menos 3 caracteres",
-      ],
+            enderecoRules: [
+                (v) => !!v || "Endereço Requerido",
+                (v) => v.length >= 5 || "Endereço deve ter pelo menos 5 caracteres",
+            ],
 
-      enderecoRules: [
-        (v) => !!v || "Endereço Requerido",
-        (v) => v.length >= 5 || "Endereço deve ter pelo menos 5 caracteres",
-      ],
+            bairroRules: [
+                (v) => !!v || "Bairro Requerido",
+                (v) => v.length >= 3 || "Bairro deve ter pelo menos 3 caracteres",
+            ],
 
-      bairroRules: [
-        (v) => !!v || "Bairro Requerido",
-        (v) => v.length >= 3 || "Bairro deve ter pelo menos 3 caracteres",
-      ],
+            cidadeRules: [
+                (v) => !!v || "Cidade Requerida",
+                (v) => v.length >= 3 || "Cidade deve ter pelo menos 3 caracteres",
+            ],
 
-      cidadeRules: [
-        (v) => !!v || "Cidade Requerida",
-        (v) => v.length >= 3 || "Cidade deve ter pelo menos 3 caracteres",
-      ],
+            estadoRules: [
+                (v) => !!v || "Estado Requerido"
+            ],
 
-      estadoRules: [
-        (v) => !!v || "Estado Requerido"
-      ],
+            passwordRules: [
+                (v) => !!v || "Senha Requerida",
+                (v) => v.length >= 8 || "Senha deve ter pelo menos 8 caracteres",
+                (v) =>
+                /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}/.test(
+                    v
+                ) ||
+                "Senha deve conter pelo menos uma letra minúscula, uma letra maiúscula, um número e um caractere especial",
+            ],
 
-      passwordRules: [
-        (v) => !!v || "Senha Requerida",
-        (v) => v.length >= 8 || "Senha deve ter pelo menos 8 caracteres",
-        (v) =>
-          /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}/.test(
-            v
-          ) ||
-          "Senha deve conter pelo menos uma letra minúscula, uma letra maiúscula, um número e um caractere especial",
-      ],
-
-      confirmPasswordRules: [
-        (v) => !!v || "Repetir Senha Requerida",
-        (v) => v === this.password || "Senhas não coincidem",
-      ],
-      items: [
-        'Amazonas', 
-        'Amapá',
-        'Santa Catarina', 
-        'Paraná', 
-        'Rio Grande do Sul', 
-        'São Paulo'
-      ]
-    };
-  },
-};
+            confirmPasswordRules: [
+                (v) => !!v || "Repetir Senha Requerida",
+                (v) => v === this.password || "Senhas não coincidem",
+            ],
+            items: [
+                'Amazonas', 
+                'Amapá',
+                'Santa Catarina', 
+                'Paraná', 
+                'Rio Grande do Sul', 
+                'São Paulo'
+            ]
+        };
+    }
+}
 </script>
 
 <style lang="scss" scoped>
 .signup-container {
-  background-color: #6832d2 !important;
+  background-color: #E1D6F6 !important;
   height: 100% !important;
 }
 
@@ -329,5 +324,5 @@ export default {
   border: thin solid #3a1c76 !important;
   color: #3a1c76 !important;
   size: "large";
-}
+} 
 </style>
