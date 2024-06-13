@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid="true">
+    <v-container fluid>
         <v-app-bar scroll-behavior="elevate">
             <div class="navbar-container">
                 <div class="d-flex justify-center align-center">
@@ -68,7 +68,6 @@
 </template>
 
 <script>
-import NavbarLogado from './NavbarLogado.vue';
 
 export default {
     data: () => ({
