@@ -7,6 +7,7 @@ import CADcandidato from '@/components/cadastro/CADcandidato';
 import EntrarEmpresaOuCandidato from '@/components/EntrarEmpresaOuCandidato.vue';
 import EDCcandidato from '@/components/edicao/EDCcandidato.vue';
 import PerfilCandidato from '@/pages/perfilCandidato.vue';
+import AgendaCandidato from '@/components/AgendaCandidato.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,6 +20,7 @@ const router = createRouter({
     { path: '/empresa_candidato', component: EntrarEmpresaOuCandidato},
     { path: '/editar-candidato', component: EDCcandidato},
     { path: '/perfilCandidato',component: PerfilCandidato}
+    { path: '/agendaC', component: AgendaCandidato}
   ],
 });
 

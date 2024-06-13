@@ -5,15 +5,22 @@ import { registerPlugins } from '@/plugins'
 import { createApp } from 'vue'
 import App from './App.vue';
 import router from './router';
+import '@mdi/font/css/materialdesignicons.css'
+import vuetify from './plugins/vuetify'
 
-// Criação da aplicação Vue
+// Create Vue application
 const app = createApp(App)
 
-// Registro de plugins
+// Register plugins
 registerPlugins(app)
 
-// Configuração do roteador
+// Configure the router and VCalendar
 app.use(router)
 
-// Montagem do aplicativo
+// Mount the app
 app.mount('#app')
+
+new Vue({
+    vuetify,
+    render: h => h(App)
+  }).$mount('#app')
