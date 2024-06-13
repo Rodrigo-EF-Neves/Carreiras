@@ -139,6 +139,7 @@ export default {
     padding-top: 80px;
     padding-bottom: 100px;
     overflow: auto;
+    background-color: white;
 }
 
 .dialogo-conversa div {
