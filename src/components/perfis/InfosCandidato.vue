@@ -49,6 +49,7 @@
                                 </v-card>
                             </v-col>
                         </v-row>
+                        <AdicionarFormacao />
                     </v-expansion-panel-text>
                 </v-expansion-panel>
             </v-col>
@@ -65,10 +66,11 @@
                                     <v-card-title>Inglês</v-card-title>
                                     <v-card-subtitle>Profissionalizante</v-card-subtitle>
                                     <v-card-text>Senac <br> De 2020 a 2024</v-card-text>
-                                    <EditarDescCandidato />
+                                    <EditarCursos />
                                 </v-card>
                             </v-col>
                         </v-row>
+                        <AdicionarCurso />
                     </v-expansion-panel-text>
                 </v-expansion-panel>
             </v-col>
@@ -84,31 +86,40 @@
                                 <v-card variant="tonal">
                                     <v-card-title>Suporte Técnico</v-card-title>
                                     <v-card-subtitle>Soft Master</v-card-subtitle>
-                                    <v-card-text>CLT <br> Tempo Integral <br> De 2020 a 2024</v-card-text>
-                                    <EditarDescCandidato />
+                                    <v-card-text>CLT <br> De 2020 a 2024</v-card-text>
+                                    <EditarExperiencias />
                                 </v-card>
                             </v-col>
                             <v-col cols="12" lg="6" md="12" sm="12" class="bloco">
                                 <v-card variant="tonal">
                                     <v-card-title>Chapeiro</v-card-title>
                                     <v-card-subtitle>Burguer Master</v-card-subtitle>
-                                    <v-card-text>CLT <br> Tempo Integral <br> De 2020 a 2024</v-card-text>
-                                    <EditarDescCandidato />
+                                    <v-card-text>CLT <br> De 2020 a 2024</v-card-text>
+                                    <EditarExperiencias />
                                 </v-card>
                             </v-col>
                         </v-row>
+                        <AdicionarExperiencia />
                     </v-expansion-panel-text>
                 </v-expansion-panel>
             </v-col>
             <v-col cols="12" md="6">
                 <v-expansion-panel>
-                    <template v-slot:title>
+                    <v-expansion-panel-title>
                         <i class="mdi mdi-star cor-primaria" style="margin-right: 8px;"></i>
                         <h3 class="cor-primaria">Habilidades</h3>
-                    </template>
-                    <template v-slot:text>
-                        <p v-for="(habilidade, index) in habilidades" :key="index">{{ habilidade }}</p>
-                    </template>
+                    </v-expansion-panel-title>
+                    <v-expansion-panel-text>
+                        <v-row>
+                            <v-col cols="12" lg="6" md="12" sm="12" class="bloco" v-for="(habilidade, index) in habilidades" :key="index">
+                                <v-card variant="tonal">
+                                    <v-card-text> {{ habilidade }} </v-card-text>
+                                    <EditarHabilidade />
+                                </v-card>
+                            </v-col>
+                        </v-row>
+                        <AdicionarHabilidade />
+                    </v-expansion-panel-text>
                 </v-expansion-panel>
             </v-col>
         </v-expansion-panels>
@@ -152,14 +163,6 @@ export default {
         // }
 
         teste() {
-            this.experiencias = [
-                '6 mundial',
-                '5 pan-americano',
-                '11 copa pistão',
-                '3 Banheira do Gugu',
-                '2 De Férias com a Ex',
-                '2 Soletrando'
-            ]
             this.habilidades = [
                 "Malabarismo",
                 "Cozinhar",
@@ -223,7 +226,7 @@ export default {
         padding: 10px;
     }
 
-    .v-card-title{
+    .v-card-title {
         font-size: unset;
     }
 
