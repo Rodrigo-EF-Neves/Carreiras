@@ -1,5 +1,4 @@
 <template>
-  <Navbar />
   <v-container fluid class="bg-deep-purple-lighten-4" style="width: 100%;">
     <v-row style="justify-content: space-between;">
 
@@ -48,7 +47,6 @@
 </template>
 
 <script>
-import Navbar from './NavbarLogado.vue';
 import CalendarComponent from './CalendarComponent.vue';
 
 export default {

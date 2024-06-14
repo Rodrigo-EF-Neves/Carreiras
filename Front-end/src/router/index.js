@@ -19,7 +19,7 @@ const router = createRouter({
     { path: '/cadastro-candidato', component: CADcandidato},
     { path: '/empresa_candidato', component: EntrarEmpresaOuCandidato},
     { path: '/editar-candidato', component: EDCcandidato},
-    { path: '/perfilCandidato',component: PerfilCandidato}
+    { path: '/perfilCandidato',component: PerfilCandidato},
     { path: '/agendaC', component: AgendaCandidato}
   ],
 });
