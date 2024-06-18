@@ -1,3 +1,4 @@
+
 <template>
     <EditarInfoCandidato />
     <div class="div-infos">
