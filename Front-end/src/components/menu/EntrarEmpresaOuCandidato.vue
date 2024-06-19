@@ -8,7 +8,7 @@
         style="display:flex; flex-direction: row; padding: 0px!important; margin:0% !important;"
         class="bg-white fill-height"
       >
-        <img class="carreiras-logo" src="../assets/logo.png" alt="Logo" />
+        <img class="carreiras-logo" src="../../assets/logo.png" alt="Logo" />
 
         <v-col
           class="candidate-column"
@@ -23,7 +23,7 @@
             </v-btn>
           </div>
           <div class="img-div">
-            <img class="img-person" src="../assets/happy-man.png" />
+            <img class="img-person" src="../../assets/happy-man.png" />
           </div>
         </v-col>
 
@@ -41,7 +41,7 @@
             </v-btn>
           </div>
           <div class="img-div">
-            <img class="img-people" src="../assets/businesspeople.png" alt="Business People" />
+            <img class="img-people" src="../../assets/businesspeople.png" alt="Business People" />
           </div>
         </v-col>
       </v-row>

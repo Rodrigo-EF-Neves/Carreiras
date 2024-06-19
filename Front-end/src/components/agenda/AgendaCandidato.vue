@@ -3,7 +3,7 @@
     <v-row style="justify-content: space-between; margin: 0px !important; padding:0px !important;">
 
       <v-col style="display:flex; flex-direction: column; align-items: center; width:100%;" cols="12" md="6">
-        <h1 style="margin: 20px;  font-size: 1.6em;">VAGAS CANDIDATADAS</h1>
+        <h1 style="margin: 20px;  font-size: 1.6em;">VAGAS CANDATADAS</h1>
         <div style="width: 96%; margin-top: 30px;">
           <!-- AQUI TEM OS CARDS-->
           <v-col>
