@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         monthYear.innerText = `${firstDay.toLocaleString('pt-BR', { month: 'long' }).toUpperCase()} ${currentYear}`;
 
         for (let x = firstDayIndex; x > 0; x--) {
-            calendarDays.innerHTML += `<div class="prev-date">${daysInPrevMonth - x + 1}</div>`;
+            calendarDays.innerHTML += `<div style="border: solid;padding: 5px !important;border-color: #cbcbcb!important;border-width: 1px; background-color:#ededed !important">${daysInPrevMonth - x + 1}</div>`;
         }
 
         for (let i = 1; i <= daysInMonth; i++) {
@@ -74,11 +74,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const today = new Date();
             const isCurrentMonth = currentMonth === today.getMonth() && currentYear === today.getFullYear();
             const isPastDay = !isCurrentMonth && new Date(currentYear, currentMonth, i) < today;
-            calendarDays.innerHTML += `<div class="day${isPastDay ? ' out-of-month' : ''}">${i}${eventHTML}</div>`;
+            calendarDays.innerHTML += `<div style="border: solid;padding: 5px !important;border-color: #cbcbcb!important;border-width: 1px;" class="day${isPastDay ? ' out-of-month' : ''}">${i}${eventHTML}</div>`;
         }
 
         for (let j = 1; j <= nextDays; j++) {
-            calendarDays.innerHTML += `<div class="next-date">${j}</div>`;
+            calendarDays.innerHTML += `<div style="border: solid;padding: 5px !important;border-color: #cbcbcb!important;border-width: 1px; background-color:#ededed !important">${j}</div>`;
         }
     };
 
@@ -165,12 +165,6 @@ body {
     padding: 10px;
     border: 1px solid #000;
     box-sizing: border-box;
-}
-
-.prev-date,
-.next-date {
-    color: #bbb;
-    border: none;
 }
 
 #next {
