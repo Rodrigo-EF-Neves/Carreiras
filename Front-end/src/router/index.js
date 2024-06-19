@@ -4,10 +4,10 @@ import Chat from '@/pages/chat.vue';
 import Login from '@/components/login/Login.vue';
 import CADempresa from '@/components/cadastro/CADempresa';
 import CADcandidato from '@/components/cadastro/CADcandidato';
-import EntrarEmpresaOuCandidato from '@/components/EntrarEmpresaOuCandidato.vue';
+import EntrarEmpresaOuCandidato from '@/components/menu/EntrarEmpresaOuCandidato.vue';
 import EDCcandidato from '@/components/edicao/EDCcandidato.vue';
 import PerfilCandidato from '@/pages/perfilCandidato.vue';
-import AgendaCandidato from '@/components/AgendaCandidato.vue';
+import AgendaCandidato from '@/pages/AgendaCandidato.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
