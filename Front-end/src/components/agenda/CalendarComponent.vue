@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const monthYear = document.getElementById('monthYear');
     const prevButton = document.getElementById('prev');
     const nextButton = document.getElementById('next');
-    
+
     let currentMonth = new Date().getMonth();
     let currentYear = new Date().getFullYear();
 
@@ -64,12 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const dayEvents = events.filter(event => event.date === date);
             let eventHTML = '';
             dayEvents.forEach(event => {
-                if(event.type == "event"){
-                    eventHTML += `<div style="background-color: #f28dff;display: flex;justify-content: center;padding: 2px;font-size: 0.8em;border-radius: 3px;">${event.title}</div>`;
-                }else{
-                    eventHTML += `<div style="background-color: #ff7a4e;display: flex;justify-content: center;padding: 2px;font-size: 0.8em;border-radius: 3px;">${event.title}</div>`;
+                if (event.type == "event") {
+                    eventHTML += `<div style="background-color:rgba(104, 50, 210, 1); color:white;     font-weight: 500; display:flex;justify-content:center; padding:2px; font-size:0.8em; border-radius:3px; margin:10px;">${event.title}</div>`;
+                } else {
+                    eventHTML += `<div style="background-color: #ff7a4e;display: flex;justify-content: center;padding: 2px;font-size: 0.8em;border-radius: 3px; margin: 10px;">${event.title}</div>`;
                 }
-                
+
             });
             const today = new Date();
             const isCurrentMonth = currentMonth === today.getMonth() && currentYear === today.getFullYear();
@@ -102,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderCalendar();
 });
-
 </script>
 
 <style scoped>
@@ -116,30 +115,29 @@ body {
 }
 
 .calendar {
-    width: 100%;
-    max-width: 1000px;
-    border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 30px;
 }
 
 .calendar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #f4f4f4;
-    border-bottom: 1px solid #ddd;
+    margin-bottom: 50px;
+    padding-right: 40px;
+    padding-left: 40px;
 }
 
 .calendar-header span {
-    font-size: 1.2em;
+    font-size: 1.6em;
     font-weight: bold;
 }
 
 .calendar-body {
     padding: 10px;
+    background-color: white;
+    border-radius: 5px;
 }
 
 .calendar-weekdays {
@@ -149,52 +147,38 @@ body {
 
 .calendar-weekdays div {
     text-align: center;
-    padding: 10px;
+    margin: 20px;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .calendar-days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-auto-rows: 100px; /* Define a altura das linhas */
+    grid-auto-rows: 100px;
 }
 
-.calendar-days .day, .calendar-days .prev-date, .calendar-days .next-date {
+.calendar-days .day,
+.calendar-days .prev-date,
+.calendar-days .next-date {
     text-align: center;
     padding: 10px;
     border: 1px solid #000;
     box-sizing: border-box;
 }
-.meeting {
-    background-color: #C1FFD7;
-}
 
-.travel {
-    background-color: #C1E1FF;
-}
-
-.conference {
-    background-color: #E1C1FF;
-}
-
-.holiday {
-    background-color: #FFD1C1;
-}
-
-.pto {
-    background-color: #FFE1C1;
-}
-
-.prev-date, .next-date {
+.prev-date,
+.next-date {
     color: #bbb;
     border: none;
 }
 
 #next {
-    color: black;
-    border: none;
+    color: none;
+    border: black;
     padding: 5px 10px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 1px;
 }
 
 #prev {
