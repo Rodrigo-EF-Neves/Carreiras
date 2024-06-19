@@ -7,12 +7,12 @@
             <img class="carreiras-logo" src="../assets/logo.png" alt="Logo" />
           </div>
           <h1 style="color: #4A148C; margin-top: 50px;">Candidato</h1>
-          <v-btn style="font-weight: bold; color: white;" dark class="v-btn--size-x-large bg-purple-darken-4 v-btn--density-compact">Entrar</v-btn>
+          <v-btn style="font-weight: bold; color: white;" dark class="v-btn--size-x-large bg-purple-darken-4 v-btn--density-compact"><a style="color: white;" href="/login">Entrar</a></v-btn>
           <img class="img-person" src="../assets/happy-man.png" alt="Happy Man" />
         </v-col>
         <v-col style="display:flex; flex-direction: column; align-items: center; width: 100%; padding: 0px !important;" class="bg-purple-darken-4" cols="12" md="6">
           <h1 class="titulo-empresa">Empresa</h1>
-          <v-btn style="color:rgba(58, 28, 118, 1);font-weight: bold;" outlined class="v-btn--size-x-large v-btn--density-compact">Entrar</v-btn>
+          <v-btn style="color:rgba(58, 28, 118, 1);font-weight: bold;" outlined class="v-btn--size-x-large v-btn--density-compact"><a href="/login">Entrar</a></v-btn>
           <img class="img-people" src="../assets/businesspeople.png" alt="Business People" />
         </v-col>
       </v-row>

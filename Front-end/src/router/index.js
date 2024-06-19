@@ -17,10 +17,10 @@ const router = createRouter({
     { path: '/login', component: Login},
     { path: '/cadastro-empresa', component: CADempresa},
     { path: '/cadastro-candidato', component: CADcandidato},
-    { path: '/empresa_candidato', component: EntrarEmpresaOuCandidato},
+    { path: '/empresa-candidato', component: EntrarEmpresaOuCandidato},
     { path: '/editar-candidato', component: EDCcandidato},
-    { path: '/perfilCandidato',component: PerfilCandidato},
-    { path: '/agendaC', component: AgendaCandidato}
+    { path: '/perfil-candidato',component: PerfilCandidato},
+    { path: '/agenda-candidato', component: AgendaCandidato}
   ],
 });
 

@@ -8,15 +8,15 @@
                     </a>
                 </div>
                 <!-- TODO Validar quando o usuário estiver logado (vai ser feito futurane) -->
-                <!-- <div class="sign-in-buttons">
+                <div class="sign-in-buttons">
                     <v-btn class="adm-btn" variant="outlined">
                         Adm
                     </v-btn>
                     <v-btn class="bg-purple-darken-4">
-                        Login
+                        <a href="/empresa-candidato">Login</a>
                     </v-btn>
-                </div> -->
-                <NavbarLogado />
+                </div>
+                <!-- <NavbarLogado /> -->
             </div>
         </v-app-bar>
     </v-container>

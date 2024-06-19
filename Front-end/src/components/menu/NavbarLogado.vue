@@ -24,7 +24,7 @@
             </v-btn>
             <v-divider class="my-2"></v-divider>
             <v-btn variant="text" rounded>
-              <a href="/agenda">Agenda</a>
+              <a href="/agenda-candidato">Agenda</a>
             </v-btn>
             <v-divider class="my-2"></v-divider>
             <v-btn variant="text" rounded>
@@ -36,11 +36,11 @@
             </v-btn>
             <v-divider class="my-2"></v-divider>
             <v-btn variant="text" rounded>
-              <a href="/perfilCandidato">Perfil</a>
+              <a href="/perfil-candidato">Perfil</a>
             </v-btn>
             <v-divider class="mt-2 mb-4"></v-divider>
             <v-btn variant="text" rounded prepend-icon="mdi-logout">
-              <a href="/logout">Sair</a>
+              <a href="/login">Sair</a>
             </v-btn>
           </div>
         </v-card-text>

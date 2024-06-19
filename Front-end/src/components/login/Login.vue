@@ -46,11 +46,11 @@ export default {
     return {
       email: '',
       emailRules: [
-        (v) => !!v || 'E-mail is required',
-        (v) => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+        (v) => !!v || 'E-mail requerido',
+        (v) => /.+@.+\..+/.test(v) || 'E-mail deve ser válido',
       ],
       password: '',
-      passwordRules: [(v) => !!v || 'Password is required'],
+      passwordRules: [(v) => !!v || 'Senha requerida'],
     };
   },
 };
