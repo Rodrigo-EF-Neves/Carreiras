@@ -4,7 +4,7 @@
             <div class="navbar-container">
                 <div class="d-flex justify-center align-center">
                     <a href="/" class="d-flex justify-center align-center" style="width: 150px; height: 150px; margin-left: 15px;">
-                        <img class="carreiras-logo" src="../../assets/Logo.png" alt="">
+                        <img class="carreiras-logo" src="../../assets/logo.png" alt="">
                     </a>
                 </div>
                 <!-- TODO Validar quando o usuário estiver logado (vai ser feito futurane) -->
