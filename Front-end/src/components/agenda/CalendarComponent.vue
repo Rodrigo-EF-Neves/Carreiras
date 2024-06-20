@@ -170,7 +170,7 @@ body {
 #next {
     color: none;
     border: black;
-    padding: 5px 10px;
+    padding: 5px 5px;
     cursor: pointer;
     border-radius: 1px;
 }
@@ -178,7 +178,7 @@ body {
 #prev {
     color: black;
     border: none;
-    padding: 5px 10px;
+    padding: 5px 5px;
     cursor: pointer;
     border-radius: 5px;
 }
