@@ -58,7 +58,7 @@ export default {
 <style scoped>
 .titulo-candidato {
   color: #4A148C;
-  margin-top: 200px;
+  margin-top: 130px;
   z-index: 2;
   text-shadow: 
     -1px -1px 0 #ffffff,  
@@ -77,7 +77,7 @@ export default {
 
 .titulo-empresa {
   color: white;
-  margin-top: 200px;
+  margin-top: 130px;
 }
 
 .img-people {
