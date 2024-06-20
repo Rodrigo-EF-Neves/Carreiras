@@ -19,15 +19,15 @@
               {{ user.email }}
             </p>
             <v-divider class="my-2"></v-divider>
-            <v-btn variant="text" rounded>
-              <a href="/">Home</a>
+            <v-btn variant="text" rounded @click='redirectToHome'>
+              Home
             </v-btn>
             <v-divider class="my-2"></v-divider>
-            <v-btn variant="text" rounded>
-              <a href="/agenda">Agenda</a>
+            <v-btn variant="text" rounded @click='redirectToSchedule'>
+              Agenda
             </v-btn>
             <v-divider class="my-2"></v-divider>
-            <v-btn variant="text" rounded>
+            <v-btn variant="text" rounded @click='redirectToChat'>
               <a href="/chat">Chat</a>
             </v-btn>
             <v-divider class="my-2"></v-divider>
@@ -35,12 +35,12 @@
               <a href="/curriculo">Curriculo</a>
             </v-btn>
             <v-divider class="my-2"></v-divider>
-            <v-btn variant="text" rounded>
-              <a href="/perfilCandidato">Perfil</a>
+            <v-btn variant="text" rounded @click='redirectToProfile'>
+              <a href="/perfil-candidato">Perfil</a>
             </v-btn>
             <v-divider class="mt-2 mb-4"></v-divider>
             <v-btn variant="text" rounded prepend-icon="mdi-logout">
-              <a href="/logout">Sair</a>
+              <a href="/login">Sair</a>
             </v-btn>
           </div>
         </v-card-text>
@@ -58,6 +58,20 @@ export default {
       email: 'juniordev@gmail.com',
     },
   }),
+  methods: {
+    redirectToHome() {
+      this.$router.push('/');
+    },
+    redirectToSchedule() {
+        this.$router.push('/agenda-candidato');
+    },
+    redirectToChat() {
+      this.$router.push('/chat');
+    },
+    redirectToProfile() {
+      this.$router.push('/perfil-candidato');
+    }
+  }
 }
 </script>
 

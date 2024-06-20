@@ -18,7 +18,7 @@
         >
           <div style="display: flex; align-items: center; flex-direction: column;">
             <h2 class="titulo-candidato">Candidato</h2>
-            <v-btn style="font-weight: bold; color: white; z-index: 3;" dark class="v-btn--size-x-large bg-purple-darken-4  v-btn--density-comfortable" >
+            <v-btn style="font-weight: bold; color: white; z-index: 3;" dark class="v-btn--size-x-large bg-purple-darken-4  v-btn--density-comfortable" @click='redirectToLogin'>
               Entrar
             </v-btn>
           </div>
@@ -36,7 +36,7 @@
           <div style="display: flex; align-items: center; flex-direction: column;">
             <h2 class="titulo-empresa" style="z-index: 2;">Empresa</h2>
             <v-btn style="color:rgba(58, 28, 118, 1);font-weight: bold; z-index: 3;" outlined
-              class="v-btn--size-x-large v-btn--density-comfortable" >
+              class="v-btn--size-x-large v-btn--density-comfortable" @click='redirectToLogin'>
               Entrar
             </v-btn>
           </div>
@@ -51,7 +51,12 @@
 
 <script>
 export default {
-  name: 'LandingPage'
+  name: 'LandingPage',
+  methods: {
+    redirectToLogin() {
+      this.$router.push('/login');
+    }
+  }
 }
 </script>
 

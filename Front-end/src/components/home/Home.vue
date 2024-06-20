@@ -143,14 +143,14 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 2em 1em;
+  margin: 1em 1em;
   text-align: center;
   background-color: #6832D2;
   border: thin solid #5300DB;
   border-radius: 10px;
-  min-height: 48%;
+  min-height: 35%;
   gap: 2.5em;
-  padding: 0 5px;
+  padding: 2em 5px;
 
   .search-field {
     max-width: 800px !important;

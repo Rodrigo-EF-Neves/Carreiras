@@ -12,7 +12,7 @@
                     <v-btn class="adm-btn" variant="outlined">
                         Adm
                     </v-btn>
-                    <v-btn class="bg-purple-darken-4">
+                    <v-btn class="bg-purple-darken-4" @click="redirectToLogin">
                         Login
                     </v-btn>
                 </div> -->
@@ -25,6 +25,11 @@
 <script>
 
 export default {
+    methods: {
+        redirectToLogin() {
+            this.$router.push('/login');
+        }
+    },
     data: () => ({
         user: {
             initials: 'JD',
